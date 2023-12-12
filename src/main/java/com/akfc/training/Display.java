@@ -1,15 +1,15 @@
 package com.akfc.training;
 
-public class Display {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+public class Display {
+    @Autowired
     private Hello hello;
 
-    public Display(Hello hello) {
-        this.hello = hello;
-    }
-
-    public void display() {
+    @Loggable()
+    public void displayMessage() {
         System.out.println(hello.getMessage());
     }
-
 }

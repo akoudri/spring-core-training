@@ -1,14 +1,15 @@
 package com.akfc.training;
 
-public class Hello {
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
+public class Hello {
+    @Value("#{(environment['spring.profiles.active'] == 'dev')?'Hello Dev':'Hello Prod'}")
     private String message;
 
-    public Hello(String message) {
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return this.message;
+    @Loggable
+    public String  getMessage() {
+        return message;
     }
 }
