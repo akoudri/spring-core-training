@@ -1,4 +1,4 @@
-package com.akfc.training;
+package com.akfc.training.ioc;
 
 public class Display {
 
