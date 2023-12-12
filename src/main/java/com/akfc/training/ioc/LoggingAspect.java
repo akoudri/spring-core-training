@@ -1,4 +1,4 @@
-package com.akfc.training;
+package com.akfc.training.ioc;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

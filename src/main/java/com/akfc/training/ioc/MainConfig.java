@@ -1,4 +1,4 @@
-package com.akfc.training;
+package com.akfc.training.ioc;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,6 +7,6 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:hello.properties")
-@ComponentScan(basePackages = "com.akfc.training")
+@ComponentScan(basePackages = "com.akfc.training.ioc")
 @EnableAspectJAutoProxy
 public class MainConfig {}

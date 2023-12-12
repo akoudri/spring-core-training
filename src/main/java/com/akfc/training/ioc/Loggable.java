@@ -1,4 +1,4 @@
-package com.akfc.training;
+package com.akfc.training.ioc;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

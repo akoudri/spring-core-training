@@ -1,4 +1,4 @@
-package com.akfc.training;
+package com.akfc.training.ioc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
