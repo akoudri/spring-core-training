@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72fbc266-0fde-4227-91b7-81b6dd368663" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/ReactiveStreamExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxDelay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxErrors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxFlatMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxGenerate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxToMono.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MonoCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MonoSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MultiCastFlux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/Titanic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/ReactiveStreamExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/ReactiveStreamExercise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +45,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.FluxDelay.executor": "Run",
+    "Application.FluxEvents.executor": "Run",
+    "Application.FluxGenerate.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.MonoCreate.executor": "Run",
+    "Application.MonoSupplier.executor": "Run",
     "Application.ReactiveStreamExercise.executor": "Run",
     "Application.Titanic.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -51,22 +67,9 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/akfc/training" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ReactiveStreamExercise">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.akfc.training.ioc.Main" />
-      <module name="spring-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.akfc.training.ioc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReactiveStreamExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.akfc.training.reactive.ReactiveStreamExercise" />
+  <component name="RunManager" selected="Application.MonoSupplier">
+    <configuration name="FluxDelay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akfc.training.reactive.FluxDelay" />
       <module name="spring-core" />
       <extension name="coverage">
         <pattern>
@@ -78,12 +81,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Titanic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.akfc.training.lambdas.Titanic" />
+    <configuration name="FluxEvents" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akfc.training.reactive.FluxEvents" />
       <module name="spring-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.akfc.training.lambdas.*" />
+          <option name="PATTERN" value="com.akfc.training.reactive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FluxGenerate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akfc.training.reactive.FluxGenerate" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akfc.training.reactive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonoCreate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akfc.training.reactive.MonoCreate" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akfc.training.reactive.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonoSupplier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akfc.training.reactive.MonoSupplier" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akfc.training.reactive.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,9 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReactiveStreamExercise" />
-        <item itemvalue="Application.Titanic" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MonoSupplier" />
+        <item itemvalue="Application.MonoCreate" />
+        <item itemvalue="Application.FluxGenerate" />
+        <item itemvalue="Application.FluxEvents" />
+        <item itemvalue="Application.FluxDelay" />
       </list>
     </recent_temporary>
   </component>
@@ -116,21 +160,5 @@
       <updated>1702377695662</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/ReactiveStreamExercise.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/ReactiveStreamExercise.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

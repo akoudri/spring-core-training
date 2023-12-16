@@ -1,88 +1,87 @@
 package com.akfc.training.reactive;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
+import java.util.function.Function;
 
-public class ReactiveStreamExercise {
+class EndSubscriber<T> implements Flow.Subscriber<T> {
 
-    public static void main(String[] args) {
-        SubmissionPublisher<Integer> publisher = new SubmissionPublisher<>();
-        TransformProcessor transformer = new TransformProcessor();
-        EnsSubscriber subscriber = new EnsSubscriber();
-        publisher.subscribe(transformer);
-        transformer.subscribe(subscriber);
-        for (int i = 0; i < 10; i++) {
-            publisher.submit(i);
-        }
-        publisher.close();
+    private Flow.Subscription subscription;
+
+    @Override
+    public void onSubscribe(Flow.Subscription subscription) {
+        this.subscription = subscription;
+        subscription.request(1);
+    }
+
+    @Override
+    public void onNext(T item) {
+        System.out.println("End subscriber received data " + item.toString());
         try {
             Thread.sleep(1000);
+            subscription.request(1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    static class EnsSubscriber implements Flow.Subscriber<Integer> {
-
-        private Flow.Subscription subscription;
-        private final List<Integer> numbers = new ArrayList<>();
-
-        @Override
-        public void onSubscribe(Flow.Subscription subscription) {
-            this.subscription = subscription;
-            subscription.request(1);
-        }
-
-        @Override
-        public void onNext(Integer item) {
-            numbers.add(item);
-            subscription.request(1);
-        }
-
-        @Override
-        public void onError(Throwable throwable) {
-            System.err.println(throwable.getMessage());
-            subscription.cancel();
-        }
-
-        @Override
-        public void onComplete() {
-            System.out.println("Received following numbers:");
-            numbers.forEach(n -> System.out.print(n + " "));
-            System.out.println();
-        }
+    @Override
+    public void onError(Throwable throwable) {
+        throwable.printStackTrace();
     }
 
-    static class TransformProcessor extends SubmissionPublisher<Integer> implements Flow.Processor<Integer, Integer> {
+    @Override
+    public void onComplete() {
+        System.out.println("Subscriber done");
+    }
+}
 
-        private Flow.Subscription subscription;
+class TransformerProcessor<T, R> extends SubmissionPublisher<R> implements Flow.Processor<T, R> {
 
-        @Override
-        public void onSubscribe(Flow.Subscription subscription) {
-            this.subscription = subscription;
-            subscription.request(1); // Requesting the first item
-        }
+    private Flow.Subscription subscription;
+    private Function<T, R> function;
 
-        @Override
-        public void onNext(Integer item) {
-            Integer result = item * item; // Squaring the item
-            submit(result); // Submitting the squared result
-            subscription.request(1); // Requesting the next item
-        }
-
-        @Override
-        public void onError(Throwable throwable) {
-            System.err.println(throwable.getMessage());
-            subscription.cancel();
-        }
-
-        @Override
-        public void onComplete() {
-            System.out.println("Transformation completed");
-            close();
-        }
+    public TransformerProcessor(Function<T, R> function) {
+        this.function = function;
     }
 
+    @Override
+    public void onSubscribe(Flow.Subscription subscription) {
+        this.subscription = subscription;
+        subscription.request(1);
+    }
+
+    @Override
+    public void onNext(T item) {
+        submit(function.apply(item));
+        subscription.request(1);
+    }
+
+    @Override
+    public void onError(Throwable throwable) {
+        throwable.printStackTrace();
+    }
+
+    @Override
+    public void onComplete() {
+        close();
+    }
+}
+
+public class ReactiveStreamExercise {
+    public static void main(String[] argv) throws InterruptedException {
+        SubmissionPublisher<Integer> publisher = new SubmissionPublisher<>();
+        TransformerProcessor<Integer, Integer> transformerProcessor = new TransformerProcessor<>(e -> e * e);
+        EndSubscriber<Integer> subscriber = new EndSubscriber<>();
+        publisher.subscribe(transformerProcessor);
+        transformerProcessor.subscribe(subscriber);
+        for (Integer i : List.of(1, 2, 3, 4, 5)) {
+            Thread.sleep(500);
+            publisher.submit(i);
+        }
+        publisher.close();
+        Thread.sleep(10000);
+    }
 }
