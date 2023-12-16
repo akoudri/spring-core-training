@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72fbc266-0fde-4227-91b7-81b6dd368663" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxDelay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxErrors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxFlatMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxGenerate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxToMono.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MonoCreate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MonoSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MultiCastFlux.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/Titanic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxErrors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxErrors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxGenerate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MultiCastFlux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MultiCastFlux.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/Titanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/Titanic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +36,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FluxErrors.executor": "Run",
-    "Application.FluxGenerate.executor": "Run",
-    "Application.FluxToMono.executor": "Run",
-    "Application.MonoSupplier.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ali/IdeaProjects/spring-core/src/main/java/com/akfc/training/reactive"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FluxErrors.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FluxGenerate.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FluxToMono.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MonoSupplier.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ali/IdeaProjects/spring-core/src/main/java/com/akfc/training/reactive&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive" />

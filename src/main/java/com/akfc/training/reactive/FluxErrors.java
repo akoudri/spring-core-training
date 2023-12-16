@@ -11,7 +11,6 @@ public class FluxErrors {
                     if (v == 100) sink.error(new RuntimeException("Forbidden value"));
                     else if (v % 2 == 0) sink.next(v);
                 })
-                .onErrorReturn(100)
                 .subscribe(System.out::println, System.err::println, () -> System.out.println("Processing completed"));
     }
 

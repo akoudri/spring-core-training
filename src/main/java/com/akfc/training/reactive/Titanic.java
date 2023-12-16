@@ -46,34 +46,12 @@ public class Titanic {
                 });
     }
 
-    /*public void head(int n) {
-        assert n > 0;
-        customers.stream().limit(n).forEach(System.out::println);
-    }
-
-    public void tail(int n) {
-        assert (n > 0 && n < customers.size());
-        customers.stream().skip(customers.size() - n).forEach(System.out::println);
-    }*/
-
     public Flux<Customer> getCustomers() {
         return customers;
     }
 
     public static void main(String[] args) {
         Titanic t = new Titanic();
-        t.customers.take(5).subscribe(System.out::println);
-        t.customers.filter(e -> e.sex == Sex.MAN && e.age > 0).collectList()
-                .map(l -> l.stream().map(e -> e.age).mapToDouble(e -> e * 1.0).average())
-                .subscribe(System.out::println);
-        /*Titanic t = new Titanic();
-        double avg = t.getCustomers().stream().filter(e -> e.age() >= 0 && e.sex() == Sex.MAN).mapToDouble(Customer::age).average().orElse(0.0);
-        t.getCustomers().stream().limit(5).map(Customer::fullName).forEach(e -> System.out.format("%s\t%s\t%s\n", e[0], e[1], e[2]));
-        System.out.println(avg);
-        t.customers.parallelStream()
-                .filter(e -> e.age() >= 0)
-                .collect(Collectors.groupingByConcurrent(Customer::sex, Collectors.averagingDouble(Customer::age)))
-                .forEach((k, v) -> System.out.println(k + " : " + v));*/
     }
 
     record Customer(int pClass, boolean survived, String name, Sex sex, double age) {
