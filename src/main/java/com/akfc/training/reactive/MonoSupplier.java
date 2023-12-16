@@ -23,7 +23,7 @@ public class MonoSupplier {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        String name = getName().subscribeOn(Schedulers.boundedElastic()).block();
-        Thread.sleep(6000);
+        getName().subscribeOn(Schedulers.boundedElastic()).subscribe(System.out::println);
+        System.out.println("Bye");
     }
 }

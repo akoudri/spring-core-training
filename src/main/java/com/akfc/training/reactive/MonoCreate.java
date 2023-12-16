@@ -13,7 +13,9 @@ public class MonoCreate {
     }
 
     public static Mono<String> fullName() {
-        return Mono.fromSupplier(() -> getFullName());
+        //Step 1: Create a mono using just and execute
+        //Step 2: Create a mono using a supplier
+        return Mono.empty();
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -21,7 +23,7 @@ public class MonoCreate {
                 .log()
                 .map(String::toUpperCase)
                 .log()
-                .subscribe(System.out::println, err -> err.printStackTrace(), () -> System.out.println("Processing completed"));
+                .subscribe(System.out::println, Throwable::printStackTrace, () -> System.out.println("Processing completed"));
     }
 
 }
