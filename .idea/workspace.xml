@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72fbc266-0fde-4227-91b7-81b6dd368663" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxErrors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxErrors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/FluxGenerate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MultiCastFlux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/MultiCastFlux.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/Titanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/akfc/training/reactive/Titanic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
